@@ -89,6 +89,7 @@ body {
 
 p {
   margin: 0 0 30px;
+  text-align: justify;
 }
 
 a {
@@ -695,7 +696,7 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 
 /* size sm */
 .tt-heading.tt-heading-sm .tt-heading-title {
-  font-size: calc(24px + 0.5vw);
+  font-size: calc(25px );
   font-weight: bold;
   font-weight: 600;
 }
@@ -1636,7 +1637,7 @@ body:not(.is-mobile)
   display: block;
   top: 54%;
   left: 50%;
-  height: 2px;
+  height: 1px;
   width: 40px;
   background-color: var(--dark-color);
   transform: translate(-50%, -50%);
@@ -1647,7 +1648,7 @@ body:not(.is-mobile)
   position: absolute;
   display: block;
   content: "";
-  height: 2px;
+  height: 1px;
   width: 40px;
   background-color: var(--dark-color);
   transition: all 0.3s ease-in-out;
@@ -1659,7 +1660,7 @@ body:not(.is-mobile)
 .tt-ol-menu-toggle-btn span::after {
   top: auto;
   bottom: -8px;
-  width: 25px;
+  /* width: 25px; */
 }
 
 /* Toggle button text */
@@ -2034,15 +2035,17 @@ body:not(.tt-boxed) .page-header-inner,
   position: relative;
   margin: 0;
   font-size: clamp(40px, 5vw, 94px);
-  font-weight: bold;
+  /* font-weight: bold; */
   font-weight: 500;
   color: var(--dark-color);
   line-height: 1.3;
   z-index: 9;
+  text-align: start;
+  font-weight: 900;
 }
 .blog-details-page-z .ph-caption-title,
 .blog-details-page-z .ph-category,
- .whatwedo.ph-caption-title,
+.whatwedo.ph-caption-title,
 .work-details.ph-caption-title,
 .work-details.ph-category,
 .work-details.project-info-list > ul > li {
@@ -2581,6 +2584,7 @@ body:not(.is-mobile) .ph-share-m-close {
 #page-header.ph-cap-sm .ph-caption-title {
   font-size: clamp(30px, 4vw, 45px);
 }
+
 #page-header.ph-cap-sm .ph-caption-title-ghost {
   padding-top: 3%;
   font-size: calc(16px + 8vw);
@@ -2597,7 +2601,7 @@ body:not(.is-mobile) .ph-share-m-close {
 
 /* Caption size xlg */
 #page-header.ph-cap-xlg .ph-caption-title {
-  font-size: clamp(48px, 8vw, 142px);
+  font-size: clamp(48px, 8vw, 100px);
 }
 @media (min-width: 1025px) {
   #page-header.ph-cap-xlg.ph-stroke .ph-caption-title {
@@ -2608,10 +2612,15 @@ body:not(.is-mobile) .ph-share-m-close {
   padding-top: 5%;
   font-size: calc(16px + 10vw);
 }
-
+.flex-caption{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 /* Caption size xxlg */
 #page-header.ph-cap-xxlg .ph-caption-title {
-  font-size: clamp(48px, 10vw, 180px);
+  font-size: clamp(48px, 10vw, 120px);
 }
 @media (min-width: 1025px) {
   #page-header.ph-cap-xxlg.ph-stroke .ph-caption-title {
@@ -3755,8 +3764,6 @@ video.pgi-video {
   max-width: 900px;
   padding: 20px 3%;
 }
-.pgi-caption-inner {
-}
 
 /* Portfolio grid item title */
 .pgi-title {
@@ -3770,12 +3777,29 @@ video.pgi-video {
   color: var(--light-color);
   line-height: 1.5;
 }
+.grid-index-home .pgi-title {
+  color: var(--dark-color);
+  text-align: center;
+}
+.grid-index-home figure,
+.abput-img figure {
+  min-height: 500px;
+}
+.grid-index-home .ttgr-item-inner {
+  text-align: center;
+}
 @media (max-width: 767px) {
   .pgi-title {
     font-size: calc(19px + 1.5vw);
   }
 }
+.p-about-max{
+  max-width: 800px;
+}
 
+.flex-reverse{
+  flex-direction: row-reverse;
+}
 /* Portfolio grid item title hover (no effect if "pgi-cap-inside" enabled!) */
 #portfolio-grid:not(.pgi-cap-inside) .pgi-title a {
   display: inline;
@@ -4960,12 +4984,15 @@ img.tt-psi-image {
   font-size: clamp(40px, 2.5vw, 100px);
   font-weight: bold;
   font-weight: 600;
+
   line-height: 1.2;
-  text-align: start;
+  text-align: center;
   text-transform: capitalize;
 }
 .tt-ps-caption-title a {
-  display: inline;
+  text-align: start;
+  display: inline-block;
+  max-width: 1400px;
   color: #fff;
 }
 
@@ -6037,38 +6064,38 @@ video.tt-pci-video {
   display: flex;
   align-items: center;
   text-decoration: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Page nav title */
 .tt-pn-title {
   position: relative;
   display: block;
-  left: 50%;
-  font-size: clamp(42px, 6vw, 110px);
+  /* left: 50%; */
+  font-size: clamp(30px, 4vw, 80px);
   font-weight: bold;
   font-weight: 500;
-  color: var(--light-color);
+  color: var(--dark-color);
   line-height: 1.6;
   opacity: 0.4;
-  white-space: nowrap;
-  transform: translate3d(-50%, 0, 0);
+  /* white-space: nowrap; */
+  /* transform: translate3d(-50%, 0, 0); */
   transition: transform 0.6s cubic-bezier(0.51, 0.57, 0.17, 1);
 
   /* Ellipsis */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
 }
 .tt-pn-hover-title {
   position: absolute;
   left: 50%;
-  font-size: clamp(36px, 6vw, 110px);
+  font-size: clamp(25px, 4vw, 9px);
   font-weight: bold;
   font-weight: 500;
   color: var(--light-color);
   line-height: 1.6;
-  white-space: nowrap;
-  transform: translate3d(-50%, 100%, 0);
+  /* white-space: nowrap; */
+  /* transform: translate3d(-50%, 100%, 0); */
   transition: transform 0.6s cubic-bezier(0.51, 0.57, 0.17, 1);
 }
 @media (max-width: 1024px) {
@@ -6081,13 +6108,13 @@ video.tt-pci-video {
 }
 
 @media (min-width: 1025px) {
-  .tt-pn-link:hover .tt-pn-title {
+  /* .tt-pn-link:hover .tt-pn-title {
     transform: translate3d(-50%, -100%, 0);
     transition-delay: 0.1s;
   }
   .tt-pn-link:hover .tt-pn-hover-title {
     transform: translate3d(-50%, 0, 0);
-    transition-delay: 0.1s;
+    transition-delay: 0.1s; */
   }
 
   /* If the hover title is cloned (have multiple <span>'s) then animate it */
@@ -6138,7 +6165,7 @@ video.tt-pci-video {
 .tt-pn-subtitle {
   margin-top: 20px;
   font-size: calc(16px + 0.1vw);
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 /* Page nav image */
@@ -6533,8 +6560,8 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
   margin-bottom: 80px;
 }
 
-.tt-testimonials-slider .swiper-wrapper {
-}
+/* .tt-testimonials-slider .swiper-wrapper {
+} */
 
 .tt-testimonials-slider .tt-ts-item {
   position: relative;
@@ -6542,7 +6569,7 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
   margin: 0 auto;
   opacity: 0.3;
   transition: opacity 0.3s;
-  padding: 10px;
+  padding: 20px;
 }
 .swiper-slide-active .tt-shadow {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -6567,7 +6594,7 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
 @media (min-width: 1025px) {
   .tt-testimonials-slider .swiper-slide {
     width: auto;
-    max-width: 800px;
+    max-width: 1000px;
     margin-left: 3vw;
     margin-right: 3vw;
   }
@@ -6882,19 +6909,30 @@ button {
 .tt-btn-dark:hover > * {
   color: var(--light-color);
 }
-
+.tt-pn-title.half{
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* Button dark outline */
 .tt-btn-dark-outline {
-  box-shadow: inset 0 0 0 2px #222;
+  box-shadow: inset 0 0 0 2px var(--light-color);
 }
 .tt-btn-dark-outline > *,
 .tt-btn-dark-outline > *::after {
-  color: #222;
+  color: var(--light-color);
 }
 .tt-btn-dark-outline:hover > * {
-  color: #222;
+  color: var(--light-color);
 }
-
+.flex-caption .tt-btn-dark-outline {
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.flex-caption .tt-btn-dark-outline > *, 
+.flex-caption  .tt-btn-dark-outline > *::after,
+.flex-caption .tt-btn-dark-outline:hover > *
+{
+  color: #fff
+}
 /* Button link */
 .tt-btn-link {
   align-items: center;
@@ -7069,13 +7107,13 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
   background-color: var(--dark-color);
 }
 .tt-accordion-caret::before {
-  width: 3px;
+  width: 2px;
   height: 100%;
   transition: height 0.3s;
 }
 .tt-accordion-caret::after {
   width: 100%;
-  height: 3px;
+  height: 2px;
 }
 .tt-accordion-item.active .tt-accordion-caret::before {
   height: 0;
@@ -9100,6 +9138,11 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 #tt-footer.menu-footer {
   top: auto;
   bottom: 10px;
+  z-index: 4;
+  display: none;
+}
+.tt-ol-menu-open #tt-footer.menu-footer {
+  display: block;
 }
 .tt-footer-inner {
   width: 100%;
@@ -9422,7 +9465,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 .brand-swiper-pagination .swiper-pagination-bullet {
   width: 5px;
-  height: 5px;
+  height: 3px;
   background-color: #ccc;
   border-radius: 2px;
   margin: 0 5px;

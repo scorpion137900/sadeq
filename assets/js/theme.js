@@ -3200,10 +3200,11 @@
       errors.push("Please enter a valid email address.");
     }
 
-    // Validate Subject
-    var subject = $('input[name="Subject"]').val().trim();
-    if (subject === "") {
-      errors.push("Please enter a subject.");
+    // Validate Phone Number
+    var phone = $('input[name="Phone"]').val().trim();
+    var phonePattern = /^[+]?[\d\s()-]{7,}$/;
+    if (!phonePattern.test(phone)) {
+      errors.push("Please enter a valid phone number.");
     }
 
     // Validate Message
