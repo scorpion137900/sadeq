@@ -539,7 +539,9 @@ body.tt-magic-cursor #magic-cursor {
   margin-right: auto;
   z-index: 2;
 }
-
+.tt-section h2 {
+  font-weight: 900;
+}
 /* ------------------------------------------------------------- *
  * Headings
 /* ------------------------------------------------------------- */
@@ -1985,7 +1987,7 @@ body:not(.tt-boxed) .page-header-inner,
   transform: none;
   overflow: hidden;
 }
-#page-header.ph-bg-image.ph-image-shadow:after {
+/* #page-header.ph-bg-image.ph-image-shadow:after {
   position: absolute;
   content: "";
   bottom: -1px;
@@ -2007,7 +2009,7 @@ body:not(.tt-boxed) .page-header-inner,
     #0d0d0d 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#0d0d0d',GradientType=0 );
-}
+} */
 #page-header.ph-bg-image .ph-image-inner {
   width: 100%;
   height: 100%;
@@ -2045,10 +2047,15 @@ body:not(.tt-boxed) .page-header-inner,
 }
 .blog-details-page-z .ph-caption-title,
 .blog-details-page-z .ph-category,
-.whatwedo.ph-caption-title,
-.work-details.ph-caption-title,
+/*.whatwedo.ph-caption-title,
+ .work-details.ph-caption-title,
 .work-details.ph-category,
-.work-details.project-info-list > ul > li {
+.work-details.project-info-list > ul > li 
+*/
+.whatwedo.ph-caption{
+  text-align:start
+}
+{
   color: #fff;
 }
 /* page header caption title ghost */
@@ -2294,7 +2301,11 @@ a.ph-category:hover {
   transform: translate(-50%, -50%);
 }
 #page-header.ph-bg-image .scroll-down-circle .sdc-icon {
-  color: var(#fff);
+  color:var(--dark-color)
+} 
+.blog-post .ph-caption-title
+{
+  color: #fff;
 }
 
 /* Scroll down circle svg */
@@ -3783,7 +3794,7 @@ video.pgi-video {
 }
 .grid-index-home figure,
 .abput-img figure {
-  min-height: 500px;
+  min-height: 600px;
 }
 .grid-index-home .ttgr-item-inner {
   text-align: center;
@@ -4488,7 +4499,7 @@ body:not(.is-mobile)
 
   /* size lg */
   .portfolio-list.pli-info-lg .pli-title {
-    font-size: calc(16px + 3vw);
+    font-size: calc(16px + 2vw);
   }
 
   /* size xlg */
@@ -6554,12 +6565,16 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
 
 .tt-testimonials-slider {
   position: relative;
-  max-width: 800px;
+  /* max-width: 800px; */
+  width: 100%;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
 }
-
+.tt-testimonials-slider .swiper-container{
+  padding: 30px 0 ;
+}
 /* .tt-testimonials-slider .swiper-wrapper {
 } */
 
@@ -6569,13 +6584,11 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
   margin: 0 auto;
   opacity: 0.3;
   transition: opacity 0.3s;
-  padding: 20px;
-}
-.swiper-slide-active .tt-shadow {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding:30px;
   border-radius: 10px;
 }
+
 .tt-testimonials-slider .swiper-slide-active .tt-ts-item {
   opacity: 1;
   font-weight: bold;
@@ -6593,8 +6606,10 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
 
 @media (min-width: 1025px) {
   .tt-testimonials-slider .swiper-slide {
-    width: auto;
-    max-width: 1000px;
+    /* width: auto; */
+    /* max-width: 1000px; */
+    max-width: 95%;
+  
     margin-left: 3vw;
     margin-right: 3vw;
   }
@@ -9383,6 +9398,16 @@ body:not(.tt-boxed) .tt-footer-inner,
   left: -75px;
   animation: bounce 1s infinite alternate-reverse;
 }
+.arrow-pointer.special-arrow{
+  left: -40px;
+  animation: none;
+  filter:invert(0);
+  transform: rotate(180deg);
+  top:-250px
+}
+.dark-mode .arrow-pointer.special-arrow{
+  filter: invert(1);
+}
 .chat-pointer {
   animation: pulse 2s infinite alternate-reverse;
   right: -75px;
@@ -9464,8 +9489,9 @@ body:not(.tt-boxed) .tt-footer-inner,
 }
 
 .brand-swiper-pagination .swiper-pagination-bullet {
-  width: 5px;
-  height: 3px;
+  width: 30px;
+  border: 1px solid var(--dark-color);
+  height: 5px;
   background-color: #ccc;
   border-radius: 2px;
   margin: 0 5px;
@@ -9695,3 +9721,20 @@ input:checked + .slider-mode.round:before {
 /* .dark-mode .scroll-down-circle img.filter-invert {
   filter: none;
 } */
+
+.bg-second {
+
+  background-color: #eee;
+}
+.dark-mode .bg-second {
+  background-color: #333;
+}
+.client-brands-section{
+  padding-bottom: 100px !important  ;
+}
+@media (max-width:768px){
+  .brand-swiper-pagination .swiper-pagination-bullet{
+    width: 5px;
+    height: 3px;
+  }
+}
