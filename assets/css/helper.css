@@ -343,9 +343,9 @@ body:not(.is-mobile) .hide-to-mobile {
 /* ------------------------------------------------------------- */
 
 /* font alter */
-.font-alter {
+/* .font-alter {
   font-family: "Noto Serif JP", serif !important;
-}
+} */
 
 /* font styles */
 .font-italic,
@@ -410,7 +410,7 @@ p.text-xlg {
 }
 
 .text-xxlg {
-  font-size: calc(100% + 0.7vw) !important;
+  /* font-size: calc(100% + 0.7vw) !important; */
 }
 .text-xxlg p,
 p.text-xxlg {
