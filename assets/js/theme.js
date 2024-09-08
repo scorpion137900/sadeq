@@ -1392,8 +1392,8 @@
 
           // Navigation arrows
           navigation: {
-            nextEl: $(this).find(".tt-ps-nav-arrow-next")[0],
-            prevEl: $(this).find(".tt-ps-nav-arrow-prev")[0],
+            nextEl: $ttPortfolioSlider.find(".tt-ps-nav-arrow-next")[0],
+            prevEl: $ttPortfolioSlider.find(".tt-ps-nav-arrow-prev")[0],
             disabledClass: "tt-ps-nav-arrow-disabled",
           },
 
@@ -3286,7 +3286,23 @@
       },
     });
   }
+  const scrollTopButton = document.querySelector("#scroll-to-top-btn");
+  if (scrollTopButton) {
+    ScrollTrigger.create({
+      trigger: ".scroll-content", // Ensure this is the correct element
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        if (self.scroll() > 1000) {
+          // 100 pixels
 
+          scrollTopButton.classList.add("active");
+        } else {
+          scrollTopButton.classList.remove("active");
+        }
+      },
+    });
+  }
   // const scrollTop = document.querySelector('.scroll-to-top');
   // const scrollContainer = document.querySelector('.scroll-content');
 
@@ -3393,4 +3409,11 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  let specialArrow = document.querySelector(".special-arrow");
+  if (specialArrow) {
+    specialArrow.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
+ 
 });
