@@ -326,8 +326,8 @@ body.tt-boxed .tt-wrap {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
 }
 
 .tt-section.rl-padding {
@@ -680,7 +680,7 @@ h6 {
   color: var(--dark-color);
 }
 .text-justify{
-  text-align: justify;
+  text-align: justify !important;
 }
 .tt-heading-title+.tt-heading-subtitle {
   margin: 15px 0 0 0;
@@ -2843,6 +2843,7 @@ body:not(.is-mobile) .ph-share-m-close {
 /* Caption size xxlg */
 #page-header.ph-cap-xxlg .ph-caption-title {
   font-size: clamp(40px, 4vw, 60px);
+  text-align: justify;
 }
 
 @media (min-width: 1025px) {
@@ -10348,13 +10349,13 @@ body:not(.tt-boxed) .tt-footer-inner,
   .arrow-pointer{
     width: 40px;
     height: 60px;
-    left: 0px;
+    left: -12px;
     top: -70px;
 
   }
   .chat-pointer {
    top: -135px;
-   right: -65px;
+   right: -73px;
   }
 
   .arrow-pointer .tt-ps-nav-prev{
@@ -10363,7 +10364,7 @@ body:not(.tt-boxed) .tt-footer-inner,
     top: -100px;
   }
 .tt-ps-caption-title a{
-  padding: 0 10px;
+  padding: 0 ;
   text-align: justify;
 }
   /* .tt-portfolio-slider-caption.psc-center {
@@ -10548,7 +10549,8 @@ input:checked+.slider-mode.round:before {
     max-width: 200px;
   }
   .footer-social .social-buttons{
-    margin-left: -11px;
+    margin-left: -17px;
+ 
   }
   .tt-ps-nav-arrow{
     transform: scale(.8);
@@ -10559,6 +10561,7 @@ input:checked+.slider-mode.round:before {
   .scroll-down-circle{
     display: none !important;
   }
+ 
 }
 
 @media screen and (max-width: 500px) {
@@ -10570,15 +10573,10 @@ input:checked+.slider-mode.round:before {
     flex-wrap: wrap;
   }
     .tt-portfolio-slider-caption.psc-center {
-    width: calc(100% - 30px);
+    width: 100%;
+    
   }
-  /* .tt-ps-nav-arrow{
-    transform: scale(.6);
-  }
-  .chat-pointer{
-    right: -25px;
-    top: -50px;
-  } */
+    
   #tt-header .page-name {
     padding: 5px;
   }
@@ -10633,3 +10631,20 @@ input:checked+.slider-mode.round:before {
 .tt-footer-z .footer-social .footer-social-text {
   text-align: left;
 }
+
+/* body::before{
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 0;
+      width: 2px ;
+      height: 100%;
+      background-color: #000;
+      z-index: 9999999999999999;
+  } */
+     .text-xxlg p.margin-bottom-0{
+    margin-bottom: 0 !important;
+   }
+.no-italic{
+    font-style: normal;
+   }

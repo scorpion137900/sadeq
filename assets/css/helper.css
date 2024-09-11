@@ -11377,8 +11377,8 @@ a.link-pink:hover {
   flex-wrap: wrap;
 }
 body.tt-boxed .tt-wrap .tt-row {
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 /* no-gutters */
