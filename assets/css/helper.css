@@ -11395,7 +11395,7 @@ body.tt-boxed .tt-wrap .tt-row {
 [class*="tt-col-"] {
   position: relative;
   width: 100%;
-  padding-left: 15px;
+  /* padding-left: 15px;  */
   padding-right: 15px;
 }
 
