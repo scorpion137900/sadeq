@@ -5193,8 +5193,7 @@ video.pi-item-video {
 
 .tt-portfolio-slider {
   position: relative;
-  width: 100%;
-  overflow-x: hidden;
+
   background-color: #0a0a0a;
 }
 
@@ -10142,8 +10141,8 @@ body:not(.tt-boxed) .tt-footer-inner,
 .tt-brand-inner {
   position: relative;
   padding: 20px 3.5%;
-  width: 100%;
-  overflow-x: hidden;
+
+
 }
 
 .brand-swiper-container {
