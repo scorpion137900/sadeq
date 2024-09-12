@@ -3948,7 +3948,11 @@ body.tt-boxed .tt-wrap .tt-grid.ttgr-gap-6 {
 /* ------------------------------------------------------------- *
  * Portfolio grid
 /* ------------------------------------------------------------- */
+#ourWork{
 
+  width: 100%;
+  overflow-x: hidden;
+}
 #portfolio-grid {
   position: relative;
 }
@@ -5190,11 +5194,13 @@ video.pi-item-video {
 .tt-portfolio-slider {
   position: relative;
   width: 100%;
+  overflow-x: hidden;
   background-color: #0a0a0a;
 }
 
 .tt-portfolio-slider .swiper-container {
   height: 100vh;
+
 }
 
 /* Portfolio slider slide */
@@ -10136,6 +10142,8 @@ body:not(.tt-boxed) .tt-footer-inner,
 .tt-brand-inner {
   position: relative;
   padding: 20px 3.5%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .brand-swiper-container {
@@ -10617,7 +10625,7 @@ input:checked+.slider-mode.round:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 3.5%;
+  padding: 20px calc(3.5% - 7px);
   flex-wrap: wrap;
 }
 
